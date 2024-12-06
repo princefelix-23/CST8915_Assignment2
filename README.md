@@ -156,14 +156,6 @@ The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is mea
 
    - Use the external IP addressfound in step 3 to access the Store Front and Store Admin.
 
----
-
-### Step 5: Deploy Virtual Customer and Worker
-
-### Step 6: Scale and Monitor Services
-
----
-
 ## Microservice Repositories
 
 The application has the following services:
