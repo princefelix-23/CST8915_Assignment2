@@ -54,8 +54,8 @@ The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is mea
 
 ---
 
-1. Containerize with Docker: Ensure each microservices are containerized and build the Docker image and ensure it is ready for cloud-based environments.
-2. Azure Services: Ensure `Azure Service Bus` and `Azure OpenAI` is configured and secretsa re included in the yaml fiel
+1. Containerize with Docker: Ensure each microservices are containerized and built the `Docker Image` and ensure it is ready for cloud-based environments.
+2. Azure Services: Ensure `Azure Service Bus` and `Azure OpenAI` is configured and secrets are included in the yaml file
 
 ### Step 1: Install `kubectl`
 
@@ -124,19 +124,19 @@ The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is mea
   kubectl get secrets
   ```
 
-### Step 4: Deploy the Algonquin Pet Store Application
+### Step 4: Deploy the Best Buy Pet Store Application
 
 ---
 
 1. **Apply the YAML file to the AKS cluster:**
 
-   - Use the K8s deployment YAML files provided under `Deployment Files\Service` to deploy each microservices or use the ` algonquin-pet-store-all-in-one.yaml` to deploy All.
+   - Use the K8s deployment YAML files provided under `Deployment Files\Service` to deploy each microservices or use the `aps-all-in-one.yaml` to deploy All.
    - Open the terminal and run the following command to apply the YAML configuration and deploy the application to AKS.
      ```
      kubectl apply -f <yaml-file-name>.yaml
      ```
      ```
-     kubectl apply -f algonquin-pet-store-all-in-one.yaml
+     kubectl apply -f aps-all-in-one.yaml
      ```
 
 2. **Verify the deployment:**
