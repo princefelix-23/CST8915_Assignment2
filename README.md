@@ -2,7 +2,7 @@
 
 ## **Scenario**
 
-This peoject demonstrate a building of cloud-native application to be deployed in a Kubernetes Cluster. The application architecture follows the design principles of the [Algonquin Pet Store (On Steroids)](https://github.com/ramymohamed10/algonquin-pet-store-on-steroids). Order Queue Service is refcatored to utilzied a mangaed backing service, in this case Azure Service Bus.
+This project demonstrates a building of cloud-native application to be deployed in a Kubernetes Cluster. The application architecture follows the design principles of the [Algonquin Pet Store (On Steroids)](https://github.com/ramymohamed10/algonquin-pet-store-on-steroids). Order Queue Service is refcatored to utilized a manage backing service, in this case Azure Service Bus.
 
 The project implements an AI-powered product Descriptions and image generation using GPT-4 and DALL-E.
 
@@ -107,7 +107,7 @@ The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is mea
      az aks get-credentials --resource-group <DEMO> --name <YOUR-CLUSTER>
      ```
    - Verify Cluster Access:
-     - Test your connectio with the following command and you should see details of the nodes in your AKS cluster if the connection is successful:
+     - Test your connection with the following command and you should see details of the nodes in your AKS cluster if the connection is successful:
      ```
      kubectl get nodes
      ```
@@ -154,7 +154,7 @@ The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is mea
 
 4. **Test the Store Front and Store Admin:**
 
-   - Use the external IP addressfound in step 3 to access the Store Front and Store Admin.
+   - Use the external IP address found in step 3 to access the Store Front and Store Admin.
 
 ## Microservice Repositories
 
