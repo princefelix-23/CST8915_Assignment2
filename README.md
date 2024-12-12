@@ -2,9 +2,9 @@
 
 ## **Scenario**
 
-This project demonstrates a building of cloud-native application to be deployed in a Kubernetes Cluster. The application architecture follows the design principles of the [Algonquin Pet Store (On Steroids)](https://github.com/ramymohamed10/algonquin-pet-store-on-steroids). Order Queue Service is refcatored to utilized a manage backing service, in this case Azure Service Bus.
+This project demonstrates a building of cloud-native application to be deployed in a Kubernetes Cluster. The application architecture follows the design principles of the [Algonquin Pet Store (On Steroids)](https://github.com/ramymohamed10/algonquin-pet-store-on-steroids). Order Queue Service is refactored to utilize a managed backing service, in this case Azure Service Bus.
 
-The project implements an AI-powered product Descriptions and image generation using GPT-4 and DALL-E.
+The project implements an AI-powered product descriptions and image generation using GPT-4 and DALL-E.
 
 ## Application Architecture
 
@@ -14,7 +14,7 @@ The project implements an AI-powered product Descriptions and image generation u
 
 ### 1. **Store-Front (Vue.js)**
 
-A simple front-end that that simulates a store front. It allows customers to add items to a cart and submit orders. It interacts with the order-service to process orders.
+A simple front-end that simulates a store front. It allows customers to add items to a cart and submit orders. It interacts with the order-service to process orders.
 
 The store-front is used in conjunction with the product-service and order-service. It interacts via REST APIs to fetch data such as product listings and order details.
 
@@ -44,7 +44,7 @@ This service works as soon as the user place an order. It is meant to be used in
 
 ### 6. **AI-Service (FastAPI)**
 
-This service rely on Azure OpenAI to generate product descriptions and images via the store-admin portal.
+This service relies on Azure OpenAI to generate product descriptions and images via the store-admin portal.
 
 The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is meant to be used in conjunction with the store-admin app.
 
@@ -54,7 +54,7 @@ The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is mea
 
 ---
 
-1. Containerize with Docker: Ensure each microservices are containerized and built the `Docker Image` and ensure it is ready for cloud-based environments.
+1. Containerize with Docker: Ensure each microservice is containerized and built the `Docker Image` and ensure it is ready for cloud-based environments.
 2. Azure Services: Ensure `Azure Service Bus` and `Azure OpenAI` is configured and secrets are included in the yaml file
 
 ### Step 1: Install `kubectl`
@@ -93,21 +93,21 @@ The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is mea
 4. **Connect to the AKS Cluster:**
    - Once the AKS cluster is deployed, navigate to the cluster in the Azure Portal.
    - In the overview page, click on **Connect**.
-   - Select **Azure CLI** tap. You will need Azure CLI.
+   - Select **Azure CLI** tab. You will need Azure CLI.
    - Login to your azure account using the following command:
      ```
      az login
      ```
    - Set the cluster subscription using the command shown in the portal:
      ```
-     az account set --subscription 'subscribtion-id'
+     az account set --subscription 'subscription-id'
      ```
    - Copy the command shown in the portal for configuring `kubectl`:
      ```
      az aks get-credentials --resource-group <DEMO> --name <YOUR-CLUSTER>
      ```
    - Verify Cluster Access:
-     - Test your connection with the following command and you should see details of the nodes in your AKS cluster if the connection is successful:
+     - Test your connection with the following command, and you should see details of the nodes in your AKS cluster if the connection is successful:
      ```
      kubectl get nodes
      ```
@@ -130,11 +130,15 @@ The AI-Service interacts with OpenAI models using Semantic Kernel SDK. It is mea
 
 1. **Apply the YAML file to the AKS cluster:**
 
-   - Use the K8s deployment YAML files provided under `Deployment Files\Service` to deploy each microservices or use the `aps-all-in-one.yaml` to deploy All.
+   - You can either deploy individual microservices using their respective YAML files located under `Deployment Files\Service`, or deploy all services at once using the `aps-all-in-one.yaml`.
    - Open the terminal and run the following command to apply the YAML configuration and deploy the application to AKS.
+
      ```
      kubectl apply -f <yaml-file-name>.yaml
      ```
+
+     Or to deploy everything at once:
+
      ```
      kubectl apply -f aps-all-in-one.yaml
      ```
