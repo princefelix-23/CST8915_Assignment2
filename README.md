@@ -203,4 +203,8 @@ The application's CI/CD:
 
 ## Demo Video
 
+Full Demonstration
 [Youtube Video Link](https://youtu.be/-AyRi96mLK0)
+
+Store Front Demo (With BestBuy Logo and everything)
+[Youtube Video Link](https://youtu.be/CmYP_qu-cRw?si=nrxnMV7l12PPZC4f)
